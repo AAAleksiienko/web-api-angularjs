@@ -14,7 +14,7 @@ myApp.controller('authorizationController',['$rootScope', '$http', '$scope', '$l
         if(authorizationForm.$valid) {
             loginService.loginUser(user).then(function (data) {
 
-                if (data.Id != undefined) {
+                if (data.access_token != undefined) {
                     $rootScope.IsLogged = true;
                     $cookies.put("IsLogged","true");
                     $location.path('/user_main_page');

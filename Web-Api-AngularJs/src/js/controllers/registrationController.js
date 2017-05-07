@@ -21,17 +21,18 @@ myApp.controller('registrationController',['$http', '$scope', '$location', '$doc
 
     $scope.create = function(user,registerUserForm){
         console.log(registerUserForm);
+        console.log(user);
         if(registerUserForm.$valid){
-            loginService.addUser(user).then(function (data) {
-                //Костыль =)
-                console.log(data.Name);
-                if(data.Name === undefined){
+            loginService.registerUser(user).then(function (data) {
+             /*
+                not implemented yet
+             if(data.email === undefined){
 
                     $ctrl.errorMsg = true;
                 }else
                 {
                     //success
-                }
+                }*/
             });
         }
     }

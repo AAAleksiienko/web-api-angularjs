@@ -3,12 +3,16 @@
         <label>Registration</label>
             <table class="register-user-table">
                 <tr>
-                    <td><label class="register-username " id="registration-modal-username-label" for="userName">Name: </label></td>
-                    <td><input class="form-control" id="userName" ng-model="user.Name" required type="text"/></td>
+                    <td><label class="register-username " id="registration-modal-username-label" for="userName">E-mail: </label></td>
+                    <td><input class="form-control" id="userName" ng-model="user.email" required type="text"/></td>
                 </tr>
                 <tr>
                     <td><label class="register-password" id="registration-modal-password-label" for="userPassword">Password: </label></td>
-                    <td><input class="form-control" id="userPassword" ng-model="user.Password" required type="password"/></td>
+                    <td><input class="form-control" id="userPassword" ng-model="user.password" required type="password"/></td>
+                </tr>
+                <tr>
+                    <td><label class="register-password" id="registration-modal-confirm-password-label" for="userPassword">Confirm Password: </label></td>
+                    <td><input class="form-control" id="confirmPassword" ng-model="user.confirmPassword" required type="password"/></td>
                 </tr>
                 <tr>
                     <td><button type="submit" id="create-user-btn" class="" ng-click="create(user, registerUserForm)">Create</button></td>
